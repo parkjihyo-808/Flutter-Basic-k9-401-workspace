@@ -6,7 +6,9 @@ class Counter{
   // ❷ static 키워드를 사용해서 static 변수 선언
   Counter(){
     i++;
+    print("i : ");
     print(i++);
+    print(i);
   }
 }
 
