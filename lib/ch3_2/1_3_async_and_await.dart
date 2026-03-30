@@ -1,4 +1,4 @@
-void main() async {
+void main() async { // 비동기 함수이지만, await 를 이용해서, 실행 순서를 제어 할수 있다.
   await addNumbers(1, 1);
   await addNumbers(2, 2);
 }
