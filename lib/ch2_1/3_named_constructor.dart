@@ -31,4 +31,10 @@ void main() {
     'membersCount': 7,
   });
   bts.sayName();
+
+  Idol seventeen = Idol.fromMap({
+    'name': '세븐틴',
+    'membersCount': 13,
+  });
+  seventeen.sayName();
 }
