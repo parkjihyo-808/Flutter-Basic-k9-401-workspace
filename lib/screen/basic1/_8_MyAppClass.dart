@@ -17,6 +17,11 @@ class MyAppTest extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        // 플로팅 액션 버튼 위젯 그려보기.
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => print('FloatingActionButton 클릭됨'),
+          child: Text('클릭'),
+        ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -24,7 +29,7 @@ class MyAppTest extends StatelessWidget {
               child: Text(
                 '오늘 점심 뭐 먹죠?',
                 style: TextStyle(
-                  fontSize: 16.0,               // 글자 크기
+                  fontSize: 50.0,               // 글자 크기
                   fontWeight: FontWeight.w700,  // 글자 굵기
                   color: Colors.blue,           // 글자 색상
                 ),
@@ -58,20 +63,39 @@ class MyAppTest extends StatelessWidget {
               ),
             ),
             // IconButton
-            Center(
-              child: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.logout),
-                // 아이콘 목록: https://fonts.google.com/icons
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.favorite),
+                    // 아이콘 목록: https://fonts.google.com/icons
+                  ),
+                ),
+                Center(
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.bolt),
+                    // 아이콘 목록: https://fonts.google.com/icons
+                  ),
+                ),
+                Center(
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.logout),
+                    // 아이콘 목록: https://fonts.google.com/icons
+                  ),
+                ),
+              ],
             ),
             // GestureDetector
             Center(
               child: GestureDetector(
                 // 기본 옵션1
-                // onTap: ()       => print('on tap'),
-                // onDoubleTap: () => print('on double tap'),
-                // onLongPress: () => print('on long press'),
+                onTap: () => print('on tap'),
+                onDoubleTap: () => print('on double tap'),
+                onLongPress: () => print('on long press'),
 
                 // 기본 옵션2
                 // 샘플 추가 옵션 확인.
@@ -90,16 +114,16 @@ class MyAppTest extends StatelessWidget {
                 // 기본 옵션 3
                 // 실물 기기로, 두손가락으로 탭을 해서, 늘리거나, 줄이기 작업.
                 // 👇 Pan 대신 확대/축소(Scale) 옵션을 추가합니다.
-                onScaleStart: (details) {
-                  print('확대/축소 시작!');
-                },
-                onScaleUpdate: (details) {
-                  // details.scale 값이 1.0보다 크면 확대, 작으면 축소입니다.
-                  print('확대/축소 중... 현재 배율: ${details.scale}');
-                },
-                onScaleEnd: (details) {
-                  print('확대/축소 종료!');
-                },
+                // onScaleStart: (details) {
+                //   print('확대/축소 시작!');
+                // },
+                // onScaleUpdate: (details) {
+                //   // details.scale 값이 1.0보다 크면 확대, 작으면 축소입니다.
+                //   print('확대/축소 중... 현재 배율: ${details.scale}');
+                // },
+                // onScaleEnd: (details) {
+                //   print('확대/축소 종료!');
+                // },
                 child: Container( // 임의의 빨간 박스 넣었다 대신에, 텍스트, 버튼, 다른  UI 가능.
                   decoration: BoxDecoration(color: Colors.red),
                   width: 100.0,
