@@ -71,7 +71,11 @@ class _LoginScreen2State extends State<LoginScreen2> {
               ),
               ElevatedButton(
                 // 단순 화면 이동 버튼 테스트
-                onPressed:() => Navigator.pushNamed(context, '/details'),
+                onPressed:() => Navigator.pushNamed(
+                    context,
+                    '/details',
+                  // 순서1 , 보내기 준비 작업
+                  arguments: {'id': 123, 'title': 'Flutter Pro'},),
                 child: const Text('임시 상세페이지 이동'),
               ),
             ],
