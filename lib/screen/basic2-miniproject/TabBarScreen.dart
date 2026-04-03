@@ -55,15 +55,16 @@ class _TabBarScreenState extends State<TabBarScreen>
         // 컨트롤러의 현재 index를 사용하여 제목을 동적으로 변경
         title: Text('현재: ${_tabs[_tabController.index]['label']}'),
         // 배경색도 현재 선택된 탭의 색상으로 부드럽게 변경됨
+        // as Color : _tabs[_tabController.index]['color'] 의 타입을 : Color 입니다.
         backgroundColor: _tabs[_tabController.index]['color'] as Color,
 
-        // bottom: AppBar 하단에 탭 바 위젯 배치
+        // bottom: AppBar(상단 헤더와 비슷한 효과) 하단에 탭 바 위젯 배치
         bottom: TabBar(
           controller: _tabController,       // 상단 정의한 컨트롤러 연결
-          indicatorColor: Colors.white,      // 탭 밑에 표시되는 줄(인디케이터) 색상
-          indicatorWeight: 3.0,              // 인디케이터 두께
-          labelColor: Colors.white,          // 선택된 탭의 아이콘/텍스트 색상
-          unselectedLabelColor: Colors.white70, // 선택되지 않은 탭의 색상
+          indicatorColor: Colors.black,      // 탭 밑에 표시되는 줄(인디케이터) 색상
+          indicatorWeight: 10.0,              // 인디케이터 두께
+          labelColor: Colors.black,          // 선택된 탭의 아이콘/텍스트 색상
+          unselectedLabelColor: Colors.lightGreenAccent, // 선택되지 않은 탭의 색상
           isScrollable: false,               // 탭 개수가 적으므로 전체 너비에 균등 배치
           tabs: _tabs.map((tab) {
             return Tab(

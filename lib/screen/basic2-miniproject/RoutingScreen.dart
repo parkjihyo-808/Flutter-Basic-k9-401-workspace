@@ -7,6 +7,7 @@ import 'LoginScreen2.dart';
 import 'MainScreen.dart';
 import 'SignupScreen.dart';
 import 'SplashScreen.dart';
+import 'ViewPagerScreen.dart';
 
 class RoutingScreen extends StatelessWidget {
   const RoutingScreen({super.key});
@@ -23,6 +24,7 @@ class RoutingScreen extends StatelessWidget {
         '/details': (context) => const DetailsScreen(),
         // 탭 메뉴 화면 추가.
         '/tabMenuTest': (context) => const TabBarScreen(),
+        '/viewPagerTest': (context) => const PageViewScreen(),
       },
     );
   }

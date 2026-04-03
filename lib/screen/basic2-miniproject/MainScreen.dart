@@ -9,8 +9,7 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('메인 화면')),
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
           children: [
             // const Center(child: FlutterLogo(size: 100)),
             Center(
@@ -36,6 +35,11 @@ class MainScreen extends StatelessWidget {
             OutlinedButton(
               onPressed: () => Navigator.pushNamed(context, '/tabMenuTest'),
               child: const Text('탭 메뉴 연습'),
+            ),
+            const SizedBox(height: 20),
+            OutlinedButton(
+              onPressed: () => Navigator.pushNamed(context, '/viewPagerTest'),
+              child: const Text('뷰페이져 연습'),
             ),
           ],
         ),
