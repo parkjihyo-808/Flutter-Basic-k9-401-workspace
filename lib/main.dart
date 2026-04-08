@@ -5,6 +5,7 @@ import 'package:busanit_401_k9_flutter_project/screen/basic5-provider-pdData/_2_
 import 'package:busanit_401_k9_flutter_project/screen/basic5-provider-pdData/_3_TourData_Pagination_Cursor_Based/controller/tour_controller.dart';
 import 'package:busanit_401_k9_flutter_project/screen/basic6-map/basic1-provider-version/providers/location_provider.dart';
 import 'package:busanit_401_k9_flutter_project/screen/basic6-map/basic2-googlePlaces-Provider/providers/map_provider.dart';
+import 'package:busanit_401_k9_flutter_project/screen/basic7-DB/basic-db2-orm/providers/todo_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -53,6 +54,8 @@ Future<void> main() async {
         ChangeNotifierProvider(create: (_) => LocationProvider()),
         //위치기반 서비스 2
         ChangeNotifierProvider(create: (_) => MapProvider()),
+        // DB , ORM , 프로바이더 버전
+        ChangeNotifierProvider(create: (_) => TodoProvider()),
 
       ],
       child: const RoutingScreen(),

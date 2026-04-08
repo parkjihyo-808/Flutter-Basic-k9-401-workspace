@@ -11,6 +11,7 @@ import 'package:busanit_401_k9_flutter_project/screen/basic6-map/basic1/screens/
 import 'package:busanit_401_k9_flutter_project/screen/basic6-map/basic2-googlePlaces-Provider/screens/map_screen.dart';
 import 'package:busanit_401_k9_flutter_project/screen/basic6-map/basic2-googlePlaces/screens/map_screen.dart';
 import 'package:busanit_401_k9_flutter_project/screen/basic7-DB/basic-db1/screens/DbBasicScreen.dart';
+import 'package:busanit_401_k9_flutter_project/screen/basic7-DB/basic-db2-orm/screens/todo_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -58,6 +59,7 @@ class RoutingScreen extends StatelessWidget {
         '/mapBasic3': (context) => const MapScreen(),
         '/mapBasic4': (context) => const MapScreen2(),
         '/dbTest1': (context) => const DbBasicScreen(),
+        '/dbTest2': (context) => const TodoScreen(),
 
 
 

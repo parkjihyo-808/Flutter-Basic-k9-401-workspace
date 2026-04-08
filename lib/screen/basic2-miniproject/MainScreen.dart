@@ -111,6 +111,11 @@ class MainScreen extends StatelessWidget {
               onPressed: () => Navigator.pushNamed(context, '/dbTest1'),
               child: const Text('기본 데이터베이스 테스트1'),
             ),
+            const SizedBox(height: 20),
+            OutlinedButton(
+              onPressed: () => Navigator.pushNamed(context, '/dbTest2'),
+              child: const Text('데이터베이스 ORM provider 테스트2'),
+            ),
 
           ],
         ),
