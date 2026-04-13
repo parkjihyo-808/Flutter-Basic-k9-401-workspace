@@ -6,6 +6,9 @@ import 'package:busanit_401_k9_flutter_project/screen/basic5-provider-pdData/_3_
 import 'package:busanit_401_k9_flutter_project/screen/basic6-map/basic1-provider-version/providers/location_provider.dart';
 import 'package:busanit_401_k9_flutter_project/screen/basic6-map/basic2-googlePlaces-Provider/providers/map_provider.dart';
 import 'package:busanit_401_k9_flutter_project/screen/basic7-DB/basic-db2-orm/providers/todo_provider.dart';
+import 'package:busanit_401_k9_flutter_project/screen/basic9-spring-conn/controller/todo_controller.dart';
+import 'package:busanit_401_k9_flutter_project/screen/basic9-spring-conn/controller/todos_login_controller.dart';
+import 'package:busanit_401_k9_flutter_project/screen/basic9-spring-conn/controller/todos_signup_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -56,6 +59,10 @@ Future<void> main() async {
         ChangeNotifierProvider(create: (_) => MapProvider()),
         // DB , ORM , 프로바이더 버전
         ChangeNotifierProvider(create: (_) => TodoProvider()),
+        // 스프링 연동,
+        ChangeNotifierProvider(create: (_) => LoginController()),
+        ChangeNotifierProvider(create: (_) => SignupController()),  // 추가
+        ChangeNotifierProvider(create: (_) => TodoController()),  // 추가
 
       ],
       child: const RoutingScreen(),

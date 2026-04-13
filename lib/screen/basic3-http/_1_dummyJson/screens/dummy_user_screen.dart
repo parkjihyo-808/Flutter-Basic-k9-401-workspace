@@ -1,8 +1,8 @@
-// lib/features/_2_reqres/screens/dummy_user_screen.dart
-import 'package:busanit_401_k9_flutter_project/screen/basic3-http/_1_dummyJson/screens/dummy_user_detail_screen.dart';
+// lib/features/_2_reqres/screen/dummy_user_screen.dart
 import 'package:flutter/material.dart';
 import '../models/dummy_user.dart';
 import '../services/dummy_user_service.dart';
+import 'dummy_user_detail_screen.dart';
 
 class DummyUserScreen extends StatefulWidget {
   const DummyUserScreen({super.key});

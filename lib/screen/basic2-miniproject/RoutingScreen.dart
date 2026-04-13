@@ -1,22 +1,29 @@
 import 'package:busanit_401_k9_flutter_project/screen/basic2-miniproject/TabBarScreen.dart';
-import 'package:busanit_401_k9_flutter_project/screen/basic3-http/_1_dummyJson/screens/dummy_user_detail_screen.dart';
-import 'package:busanit_401_k9_flutter_project/screen/basic3-http/_3_news_api/screens/news_screen.dart';
-import 'package:busanit_401_k9_flutter_project/screen/basic3-http/_4_public_data_1_earthquake/screens/PublicDataScreen.dart';
-import 'package:busanit_401_k9_flutter_project/screen/basic4-provider/screens/CounterScreen.dart';
-import 'package:busanit_401_k9_flutter_project/screen/basic5-provider-pdData/_1_FoodData/screens/my_pd_test_screen.dart';
-import 'package:busanit_401_k9_flutter_project/screen/basic5-provider-pdData/_2_TourData/screens/tour_screen.dart';
-import 'package:busanit_401_k9_flutter_project/screen/basic5-provider-pdData/_3_TourData_Pagination_Cursor_Based/screens/tour_screen.dart';
-import 'package:busanit_401_k9_flutter_project/screen/basic6-map/basic1-provider-version/screens/location_screen.dart';
+
 import 'package:busanit_401_k9_flutter_project/screen/basic6-map/basic1/screens/location_screen.dart';
 import 'package:busanit_401_k9_flutter_project/screen/basic6-map/basic2-googlePlaces-Provider/screens/map_screen.dart';
 import 'package:busanit_401_k9_flutter_project/screen/basic6-map/basic2-googlePlaces/screens/map_screen.dart';
 import 'package:busanit_401_k9_flutter_project/screen/basic7-DB/basic-db1/screens/DbBasicScreen.dart';
 import 'package:busanit_401_k9_flutter_project/screen/basic7-DB/basic-db2-orm/screens/todo_screen.dart';
+import 'package:busanit_401_k9_flutter_project/screen/basic8-base-layout/screens/home_screen.dart';
+import 'package:busanit_401_k9_flutter_project/screen/basic9-spring-conn/screen/todos_login.dart';
+import 'package:busanit_401_k9_flutter_project/screen/basic9-spring-conn/screen/todos_main_screen.dart';
+import 'package:busanit_401_k9_flutter_project/screen/basic9-spring-conn/screen/todos_signup_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../basic3-http/_1_dummyJson/screens/dummy_user_screen.dart';
 import '../basic3-http/_2_reqres/screen/reqres_screen.dart';
+import '../basic3-http/_3_news_api/screens/news_screen.dart';
+import '../basic3-http/_4_public_data_1_earthquake/screens/PublicDataScreen.dart';
+import '../basic4-provider/screens/CounterScreen.dart';
+import '../basic5-provider-pdData/_1_FoodData/screens/my_pd_test_screen.dart';
+import '../basic5-provider-pdData/_2_TourData/screens/tour_screen.dart';
+import '../basic5-provider-pdData/_3_TourData_Pagination_Cursor_Based/screens/tour_screen.dart';
+import '../basic6-map/basic1-provider-version/screens/location_screen.dart';
+import '../basic9-spring-conn/screen/todo_create_screen.dart';
+import '../basic9-spring-conn/screen/todo_detail_screen.dart';
+import '../basic9-spring-conn/screen/todos_screen.dart';
 import 'AccordionNavScreen.dart';
 import 'DetailsScreen.dart';
 import 'LoginScreen2.dart';
@@ -60,6 +67,14 @@ class RoutingScreen extends StatelessWidget {
         '/mapBasic4': (context) => const MapScreen2(),
         '/dbTest1': (context) => const DbBasicScreen(),
         '/dbTest2': (context) => const TodoScreen(),
+        '/baseLayout': (context) => const HomeScreen(),
+        //스프링 연동.
+        '/signup': (context) => const TodosSignupScreen(),
+        '/login': (context) => const LoginScreen(),
+        '/todosMain': (context) => const TodosMainScreen(),
+        '/todos': (context) => TodosScreen(),
+        "/todoCreate": (context) => const TodoCreateScreen(),
+        '/todoDetail': (context) => TodoDetailScreen(tno: ModalRoute.of(context)!.settings.arguments as int),
 
 
 

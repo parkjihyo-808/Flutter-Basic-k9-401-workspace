@@ -1,7 +1,7 @@
-import 'package:busanit_401_k9_flutter_project/screen/basic3-http/_3_news_api/screens/news_detail_screen.dart';
 import 'package:flutter/material.dart';
 import '../models/news_article.dart';
 import '../services/news_service.dart';
+import 'news_detail_screen.dart';
 
 class NewsScreen extends StatefulWidget {
   const NewsScreen({super.key});
